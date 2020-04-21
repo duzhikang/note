@@ -1,0 +1,75 @@
+(() => {
+  // 监听主页顶栏tab切换
+  $('.top-bar-container>.container-left').click(function (e) {
+    $('.top-bar-container .title').removeClass('selected')
+    $('.top-bar-container .line').removeClass('selected')
+    $('.container-left .title').addClass('selected')
+    $('.container-left .line').addClass('selected')
+    $("#container .money-deatil").css('display', 'none')
+    $("#container .pay-card").css('display', '')
+  })
+  $('.top-bar-container>.container-right').click(function (e) {
+    $('.top-bar-container .title').removeClass('selected')
+    $('.top-bar-container .line').removeClass('selected')
+    $('.container-right .title').addClass('selected')
+    $('.container-right .line').addClass('selected')
+    $("#container .pay-card").css('display', 'none')
+    $("#container .money-deatil").css('display', '')
+  })
+  $('#container .top-bar-container').click((e) => {
+    console.log(e)
+    // if(e.toElement)
+  })
+
+  html2canvas(document.querySelector("#sava-qrcode")).then(canvas => {
+    console.log('------------------')
+    console.log(canvas)
+    document.body.appendChild(canvas)
+    //$('#save-code').css('display', 'none');
+  });
+
+  // 监听设置金额按钮
+  $('#container .pay-card .set-num').click((e) => {
+    $('#mask').css('display', 'block')
+    $('#container .set-num-box').css('display', 'flex')
+
+    // 监听设置金额弹框关闭按钮
+    $('#container .set-num-box .close').click((e) => {
+      $('#mask').css('display', '')
+      $('#container .set-num-box').css('display', '')
+      $('#container .set-num-box .close').unbind('click')
+    })
+  })
+
+  // 提示框类
+  class tipBox {
+    /**
+    * 
+    * @param {提示语} str 
+    * @param {存在时间 s} time 
+    */
+    constructor(str, time) {
+      this.str = str;
+      this.time = time;
+    }
+    showTipBox() {
+      var body = $('body')[0]
+      $(body).append(`<div id="tip-box">
+                      <span class="tip-title">${this.str}</span>
+                    </div>`)
+      setTimeout(() => {
+        this.removeTipBox()
+      }, this.time * 1000)
+    }
+    removeTipBox() {
+      $($('#tip-box')[0]).addClass('fade')
+      setTimeout(() => {
+        $($('#tip-box')[0]).remove();
+      }, 900)
+    }
+  }
+
+  // new tipBox('三月的烟雨飘摇的南方', 2).showTipBox()
+
+})()
+

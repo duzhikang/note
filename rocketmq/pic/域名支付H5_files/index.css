@@ -1,0 +1,519 @@
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+#mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: none;
+}
+
+/****************************************主页**********************************************/
+
+#container {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.top-bar {
+  width: 7.5rem;
+  height: 2.12rem;
+  /* background-color: rgb(29, 165, 101); */
+  box-sizing: border-box;
+  padding: .6rem 1.6rem;
+  margin: 0 auto;
+}
+
+.top-bar .top-bar-container {
+  width: 100%;
+  height: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  font-size: .3rem;
+  font-weight: 400;
+}
+
+.top-bar .top-bar-container .box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-bar .container-left, .top-bar .container-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .container-left {
+  justify-content: flex-start;
+  padding-left: .2rem;
+}
+
+.top-bar .container-right {
+  justify-content: flex-end;
+  padding-right: .2rem;
+}
+
+.top-bar .title.selected {
+  font-size: .31rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.top-bar-container .line {
+  display: inline-block;
+  width: .64rem;
+  height: .08rem;
+  margin-top: .1rem;
+  border-radius: 0.05rem;
+}
+
+.top-bar-container .line.selected {
+  background-color: #139cf3;
+}
+
+/*****************************收款易卡片**********************************/
+
+#container .pay-card {
+  width: 6rem;
+  height: 7.4rem;
+  box-sizing: border-box;
+  margin: .3rem auto;
+  padding: .3rem 0 0 0;
+  /* background-color: rgba(100, 212, 35, 0.808); */
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0.01rem 0.04rem 0.12rem #93a9ce;
+}
+
+#container .pay-card .card-icon-bar {
+  /* width: 100%; */
+  box-sizing: border-box;
+  height: .4rem;
+  padding: 0 0 0 .4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#container .pay-card .wallet-icon {
+  width: .28rem;
+}
+
+#container .pay-card .code-pay-title {
+  font-size: .22rem;
+  color: #7f7f7f;
+  margin-left: .2rem;
+}
+
+#container .pay-card .pay-num {
+  font-size: .35rem;
+  font-weight: 800;
+  text-align: center;
+  color: #333333;
+}
+
+#container .pay-card .card-operation-bar {
+  width: 100%;
+  height: 5.8rem;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  /* background-color: rgb(43, 157, 172); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#container .pay-card .card-operation-bar .title {
+  font-size: .22rem;
+  color: #555;
+}
+
+#container .pay-card .card-operation-bar .code-img {
+  width: 3.3rem;
+  height: 3.3rem;
+  margin-top: .7rem;
+  background-color: rgb(22, 6, 12);
+}
+
+#container .pay-card .card-operation-bar .btn-bar {
+  width: 3.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+  margin-top: .6rem;
+  color: #309fef;
+  font-weight: 500;
+  font-size: .23rem;
+}
+
+/*****************************收款易卡片**********************************/
+
+/*****************************资金详情卡片**********************************/
+
+#container .money-deatil {
+  width: 7.5rem;
+  /* height: 8rem; */
+  /* background-color: rgb(200, 175, 219); */
+  margin: 0.35rem auto;
+  padding: 0 .3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#container .money-deatil .detail-card {
+  width: 3.3rem;
+  height: 1.6rem;
+  background-color: #fff;
+  border-top-left-radius: .15rem;
+  border-top-right-radius: .15rem;
+  border-bottom-left-radius: .15rem;
+  border-bottom-right-radius: .15rem;
+  box-shadow: 0.01rem 0.04rem 0.12rem #c6d7f4;
+  box-sizing: border-box;
+  padding: .4rem 0 .4rem .4rem;
+}
+
+#container .money-deatil .detail-card:nth-child(n + 3) {
+  margin-top: .5rem;
+}
+
+#container .money-deatil .detail-card .money-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#container .money-deatil .detail-card .money-box .money-num {
+  font-size: .31rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+#container .money-deatil .detail-card .money-box .pay-category {
+  width: .26rem;
+  margin-left: .16rem;
+}
+
+#container .money-deatil .detail-card .tip-detail {
+  font-size: .19rem;
+  color: #9a9a9a;
+  margin-top: 0.1rem;
+  display: inline-block;
+}
+
+/*****************************资金详情卡片**********************************/
+
+/*****************************设置金额弹框**********************************/
+
+#container .set-num-box {
+  width: 6rem;
+  height: 4.44rem;
+  background-color: #fff;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translate(-50%, 50%);
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+#container .set-num-box .box-title-bar {
+  width: 100%;
+  padding: .3rem .4rem .4rem .4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container .set-num-box .box-title-bar .num-name {
+  font-size: .24rem;
+  color: #989898;
+}
+
+#container .set-num-box .box-title-bar .close {
+  font-size: .40rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+#container .set-num-box .gethering {
+  color: #555;
+  font-size: .24rem;
+}
+
+#container .set-num-box .set-num-bar {
+  width: 100%;
+  padding: 0 .95rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: .4rem;
+}
+
+#container .set-num-box .set-num-bar .rmb-icon {
+  font-size: .5rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+#container .set-num-box .set-num-bar .set-num-input {
+  width: 3rem;
+  border-bottom: .01rem solid #000000;
+  margin-left: .1rem;
+  font-size: .4rem;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+}
+
+#container .set-num-box .btn-bar {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .6rem 1.3rem;
+}
+
+#container .set-num-box .btn-bar .cancle {
+  width: 1.4rem;
+  height: .6rem;
+  border: none;
+  color: #000000;
+  border-radius: .1rem;
+  font-size: .2rem;
+  outline: none;
+}
+
+#container .set-num-box .btn-bar .confirm {
+  width: 1.4rem;
+  height: .6rem;
+  border: none;
+  border-radius: .1rem;
+  background: #139cf3;
+  font-size: .2rem;
+  color: #000000;
+  outline: none;
+}
+
+#container .set-num-box .btn-bar .confirm:active {
+  background: #0492eb;
+}
+
+/*****************************设置金额弹框**********************************/
+
+/*****************************收款易功能未开启******************************/
+
+#funtion-close {
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, .6); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 19;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+}
+
+#funtion-close .small-love-icon {
+  width: 3.3rem;
+  margin-top: 1.5rem;
+}
+
+#funtion-close .tip-title-close {
+  font-size: .33rem;
+  font-weight: 500;
+  margin-top: .25rem;
+}
+
+#funtion-close .tip-title-limit {
+  margin-top: .4rem;
+  font-size: .23rem;
+}
+
+#funtion-close .tip-title-open {
+  margin-top: .15rem;
+  font-size: .23rem;
+}
+
+/*****************************收款易功能未开启******************************/
+
+/****************************************保存收款码**********************************************/
+
+#save-code {
+  width: 100%;
+  height: 100%;
+  background-color: #3ba1f4;
+  box-sizing: border-box;
+  padding-top: 1.84rem;
+}
+
+#save-code .paper-box {
+  width: 6.47rem;
+  height: 8.19rem;
+  background-color: #ffffff;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+#save-code .paper-box .paper-head {
+  width: 100%;
+  height: 2.03rem;
+  border-bottom: .01rem dashed #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#save-code .paper-box .paper-head .header-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#save-code .paper-box .paper-head .header-name .wallet-selected {
+  width: .26rem;
+}
+
+#save-code .paper-box .paper-head .header-name .code-title {
+  font-size: .33rem;
+  color: #555;
+  margin-left: .2rem;
+}
+
+#save-code .paper-box .paper-head .company {
+  margin-top: .3rem;
+  font-size: .28rem;
+  color: #555;
+}
+
+#save-code .paper-box .paper-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#save-code .paper-box .paper-body .code {
+  width: 4.37rem;
+  height: 4.37rem;
+  background: #000;
+  margin-top: .46rem;
+}
+
+#save-code .paper-box .paper-body .code-title {
+  font-size: .22rem;
+  color: #555;
+  margin-top: .4rem;
+}
+
+#save-code .paper-box .circle-left {
+  width: .4rem;
+  height: .4rem;
+  border-radius: .2rem;
+  position: absolute;
+  left: -.2rem;
+  top: 1.83rem;
+  background-color: #3ba1f4;
+}
+
+#save-code .paper-box .circle-right {
+  width: .4rem;
+  height: .4rem;
+  border-radius: .2rem;
+  position: absolute;
+  right: -.2rem;
+  top: 1.83rem;
+  background-color: #3ba1f4;
+}
+
+/****************************************保存收款码**********************************************/
+
+#tip-box {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 3rem;
+  height: 1.85rem;
+  border: .01rem solid #1e1e1e;
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: .1rem;
+  text-align: center;
+}
+
+#tip-box .tip-title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: .28rem;
+  z-index: 999;
+}
+
+#tip-box.fade {
+  animation: fade 1s 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
